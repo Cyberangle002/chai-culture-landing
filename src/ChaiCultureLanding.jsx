@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion } from "framer-motion";
 
 
 const ChaiCultureLanding = () => {
   const [email, setEmail] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const { scrollYProgress } = useScroll();
+  
  
   useEffect(() => {
     const handleMouseMove = (e) => {
