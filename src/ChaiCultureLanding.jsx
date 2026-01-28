@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
+
 const ChaiCultureLanding = () => {
   const [email, setEmail] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
