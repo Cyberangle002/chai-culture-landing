@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 
 const ChaiCultureLanding = () => {
@@ -1100,17 +1101,17 @@ const ChaiCultureLanding = () => {
               </form>
 
               <AnimatePresence>
-                {showSuccess && (
-                  <motion.div
-                    className="success-message"
-                    initial={{ opacity: 0, y: -15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -15 }}
-                  >
-                    🎉 Thank you! We'll notify you when we launch.
-                  </motion.div>
-                )}
-              </AnimatePresence>
+  {showSuccess && (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+    >
+      {/* content */}
+    </motion.div>
+  )}
+</AnimatePresence>
+
             </motion.div>
 
             <motion.div className="social-section" variants={itemVariants}>
